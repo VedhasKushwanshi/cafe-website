@@ -1,0 +1,6 @@
+{
+  "name": "Chai & Coc Café",
+  "description": "A smart Indian chai and specialty coffeehouse experience at UPES Bidholi, Dehradun — featuring digital menu customization, QR table ordering, live order tracking, C&C Rewards, and Coco, your AI café assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

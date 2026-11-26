@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, Cambria, serif;
+  --font-sans: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-espresso: #3B2416;
+  --color-coffee: #6F4E37;
+  --color-cream: #FFF4E6;
+  --color-beige: #E8D5BC;
+  --color-caramel: #C88746;
+  --color-charcoal: #1F1F1F;
+  --color-softwhite: #FFFDF9;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: #FFFDF9;
+    color: #3B2416;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #C88746;
+    outline-offset: 2px;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes steamFloat {
+  0% {
+    transform: translateY(4px) scale(0.96);
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.55;
+  }
+  75% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-16px) scale(1.06);
+    opacity: 0;
+  }
+}
+
+.animate-steam-1 {
+  animation: steamFloat 3.6s ease-in-out infinite;
+}
+
+.animate-steam-2 {
+  animation: steamFloat 4.2s ease-in-out 1.1s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-steam-1,
+  .animate-steam-2 {
+    animation: none;
+    opacity: 0.4;
+  }
+}
